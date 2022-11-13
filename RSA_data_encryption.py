@@ -38,12 +38,12 @@ def RSA_decryption(data: bytes, privateKey: RSA) -> bytes:
 def main():
     #args parser
     parser = argparse.ArgumentParser(description="RSA encryption, decryption")
-    parser.add_argument("--input", help="chemin du fichier à chiffrer ou déchiffrer", required=False)
-    parser.add_argument("--output", help="chemin du fichier de sortie", required=False)
-    parser.add_argument("--encrypt", help="permet de chifrer in fichier", action="store_true", required=False)
-    parser.add_argument("--decrypt", help="permet de déchiffrer un fichier", action="store_true", required=False)
-    parser.add_argument("--privateKey", help="chemin de la clée privée pour le déchiffrement du fichier", required=False)
-    parser.add_argument("--publicKey", help="chemin de la clée publique pour le chiffrement du fichier", required=False)
+    parser.add_argument("--input", help="chemin du fichier à chiffrer ou déchiffrer", required=True)
+    parser.add_argument("--output", help="chemin du fichier de sortie", required=True)
+    parser.add_argument("--encrypt", help="permet de chifrer in fichier", action="store_true", required=True)
+    parser.add_argument("--decrypt", help="permet de déchiffrer un fichier", action="store_true", required=True)
+    parser.add_argument("--privateKey", help="chemin de la clée privée pour le déchiffrement du fichier", required=True)
+    parser.add_argument("--publicKey", help="chemin de la clée publique pour le chiffrement du fichier", required=True)
 
     args = parser.parse_args()
 
