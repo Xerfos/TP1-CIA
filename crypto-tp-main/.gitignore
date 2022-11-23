@@ -1,0 +1,12 @@
+# ne jamais mettre à jour les fichiers initiaux
+certs/
+config/
+www/
+
+# ignorer les fichiers de rendus
+*.zip
+rendus/*
+!rendus/correct.py
+
+# macos shit
+.DS_Store

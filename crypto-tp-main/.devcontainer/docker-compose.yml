@@ -1,0 +1,23 @@
+---
+
+version: "3"
+
+services:
+
+  app:
+    image: "nikaro/debian-dev:latest"
+    volumes:
+      # workspace
+      - "..:/workspace"
+      # config
+      - "$HOME/.config/nvim:/home/code/.config/nvim"
+      - "$HOME/.config/git:/home/code/.config/git"
+      - "$HOME/.ssh:/home/code/.ssh"
+      - "$HOME/.gnupg:/home/code/.gnupg"
+      - "$SSH_AUTH_SOCK:/ssh-agent:ro"
+      # docker socket
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      - "SSH_AUTH_SOCK=/ssh-agent"
+
+...

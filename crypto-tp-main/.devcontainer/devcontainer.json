@@ -1,0 +1,12 @@
+{
+    "name": "crypto-tp",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "extensions": [],
+    "settings": {},
+    "vim-extensions": [
+        "psf/black"
+    ],
+    "vim-settings": []
+}
